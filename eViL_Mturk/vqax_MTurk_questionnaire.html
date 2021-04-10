@@ -1,0 +1,2980 @@
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<section class="container" id="Survey">
+    <div class="row" id="workContent">
+        <div class="col-xl-12">
+
+            <!-- CONTENT START -->
+            <div class="accordion col-12" id="hitinfo">
+                
+                <!-- ###### INSTRUCTIONS START ###### -->
+                <div class="card">
+                    <div class="card-header" id="instructionsHeading">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse"
+                                    data-target="#instructions" aria-expanded="true"
+                                    aria-controls="instructions">
+                                Instructions
+                            </button>
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <h5><b>Overview</b></h5>
+                        <p>Thank you for participating in this HIT and contributing to my PhD research! &#129303</p>
+                        <p>The goal of this task is to assess the quality of explanations.</p>
+                        <p><b>An explanation justifies an answer to a question.</b></p>
+                        <p>This HIT contains 10 questions about images. For each answer, you need to evaluate the quality of two given explanations.</p>
+                        <h5><b>Task Description</b></h5>
+                        <ol>
+                            <li>First, you will be shown an <b>Image</b> and a <b>Question</b> about the image.</li>
+                            <li>Then you need to choose the correct answer from three answer choices. Only one of the answers is correct and the answers are known to us. This is solely to make sure that you have understood the image-question pair correctly. You will not be able to submit the HIT if too many of your answers are wrong.</li>
+                            <li>You will then be shown two explanations that each try to justify this answer. <b>The explanations are independent of each other and their order is meaningless!</b> </li>
+                            <li>For each of the explanations, we ask <b>two evaluation questions</b>:</li>
+                                <ul>
+                                    <li>Given the <u>image and the question</u>, does the explanation justify the answer?</li>
+                                    <li>If any, what are the shortcomings of the explanation?</li>
+                                </ul>
+                            </li>
+                        </ol>
+                        <h5><b>Tips</b></h5>
+                        <ul>
+                            <li>Minor grammatical and style errors should be ignored (e.g. case sensitivity, missing periods, a missing pronoun etc.).</li>
+                            <li>An explanation that just repeats or restates the statement is NOT a valid explanation.</li>
+                            <li>A good approach to evaluating explanations is the following: Before looking at the explanations, think of an explanation yourself and then anchor your assessments based on that.</li> 
+                        </ul>
+                        <p><span class="problem">Quality checks and known answers are placed throughout the questionnaire!</span></p>
+                    </div>
+                </div>
+                <!-- INSTRUCTIONS END -->
+
+                <!-- ###### EXAMPLES START ###### -->
+                <div class="card" name="examples">
+                    <div class="card-header" id="examplesHeading">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse"
+                                    data-target="#examples" aria-expanded="true"
+                                    aria-controls="examples">
+                                Examples (click to expand/collapse)
+                            </button>
+                        </h5>
+                    </div>
+                    <div class="collapse show" id="examples" aria-labelledby="examplesHeading"
+                         data-parent="#hitinfo">
+                        <div class="card-body">
+
+                            <!--EX-->
+                            <div class="questionrow">
+                                <div class="row" id="ex-img">
+                                    <div class="col-lg-8">
+                                        <h5><b>EXAMPLE IMAGE:</b></h5>
+                                        <img class="img-thumbnail" src="https://vqax.s3.eu-west-2.amazonaws.com/rough_sea.jpg">
+                                        <p><h5><b> EXAMPLE Question:</b> Is the sea calm?</h5></p>
+                                    </div>
+                                </div>
+                                <div class="row panel">
+                                    <div class="prompt pl-4 col-lg-8">
+                                        1. What is the correct answer?
+                                    </div>
+
+                                    <div class="pl-4 col-lg-8 choicebox">
+                                        <div class="form-check">
+                                            <label class="form-check-label btn btn-sm btn-outline-primary">
+                                                <input class="form-check-input" type="radio"
+                                                       name="q1"
+                                                       value="entailment" disabled>
+                                                Yes
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label btn btn-sm btn-outline-primary">
+                                                <input class="form-check-input" type="radio"
+                                                       name="q1"
+                                                       value="Neutral" checked>
+                                                No
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label btn btn-sm btn-outline-primary">
+                                                <input class="form-check-input" type="radio"
+                                                       name="q1"
+                                                       value="Contradiction" disabled>
+                                                Banana
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br />
+                                <h5><b>Given the image and the question, do the explanations below justify the answer to the question?</b></h5></p>
+                                <div class="row panel">
+                                    <div class="prompt pl-4 col-lg-8">
+                                        <b>Explanation #1:</b> There are waves and foam.
+                                    </div>
+
+                                    <div class="pl-4 col-lg-8 choicebox">
+                                        <div class="form-check">
+                                            <label class="form-check-label btn btn-sm btn-outline-success">
+                                                <input class="form-check-input" type="radio"
+                                                       name="q2"
+                                                       value="yes" checked>
+                                                Yes
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label btn btn-sm btn-outline-primary">
+                                                <input class="form-check-input" type="radio"
+                                                       name="q2"
+                                                       value="w_yes" disabled>
+                                                Weak Yes
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label btn btn-sm btn-outline-warning">
+                                                <input class="form-check-input" type="radio"
+                                                       name="q2"
+                                                       value="w_no" disabled>
+                                                Weak No
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label btn btn-sm btn-outline-danger">
+                                                <input class="form-check-input" type="radio"
+                                                       name="q2"
+                                                       value="no" disabled>
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel row">
+                                    <div class="prompt pl-4 col-lg-8">
+                                        What are the shortcomings of Explanation #1?
+                                    </div>
+                                    <div class="pl-4 col-lg-8 choicebox">
+                                        <div class="form-check">
+                                            <label class="form-check-label btn btn-sm btn-outline-danger">
+                                                <input class="form-check-input" type="checkbox"
+                                                       name="ex1"
+                                                       value="no" disabled>
+                                                Incorrect description of the image
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label btn btn-sm btn-outline-danger">
+                                                <input class="form-check-input" type="checkbox"
+                                                       name="ex1"
+                                                       value="no" disabled>
+                                                Insufficient justification 
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label btn btn-sm btn-outline-danger">
+                                                <input class="form-check-input" type="checkbox"
+                                                       name="ex1"
+                                                       value="no" disabled>
+                                                Confusing sentence
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label btn btn-sm btn-outline-success">
+                                                <input class="form-check-input" type="checkbox"
+                                                       name="ex1"
+                                                       value="yes" checked>
+                                                None
+                                            </label>
+                                        </div>
+                                        <div class="pl-0">
+                                            It's a good explanation.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row panel">
+                                    <div class="prompt pl-4 col-lg-8">
+                                        <b>Explanation #2:</b> The sea is calm.
+                                    </div>
+
+                                    <div class="pl-4 col-lg-8 choicebox">
+                                        <div class="form-check">
+                                            <label class="form-check-label btn btn-sm btn-outline-success">
+                                                <input class="form-check-input" type="radio"
+                                                       name="q4"
+                                                       value="yes" disabled>
+                                                Yes
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label btn btn-sm btn-outline-primary">
+                                                <input class="form-check-input" type="radio"
+                                                       name="q4"
+                                                       value="w_yes" disabled>
+                                                Weak Yes
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label btn btn-sm btn-outline-warning">
+                                                <input class="form-check-input" type="radio"
+                                                       name="q4"
+                                                       value="w_no" disabled>
+                                                Weak No
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label btn btn-sm btn-outline-danger">
+                                                <input class="form-check-input" type="radio"
+                                                       name="q4"
+                                                       value="no" checked>
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel row">
+                                    <div class="prompt pl-4 col-lg-8">
+                                        What are the shortcomings of Explanation #2?
+                                    </div>
+                                    <div class="pl-4 col-lg-8 choicebox">
+                                        <div class="form-check">
+                                            <label class="form-check-label btn btn-sm btn-outline-danger">
+                                                <input class="form-check-input" type="checkbox"
+                                                       name="ex2"
+                                                       value="no" disabled>
+                                                Incorrect description of the image
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label btn btn-sm btn-outline-danger">
+                                                <input class="form-check-input" type="checkbox"
+                                                       name="ex2"
+                                                       value="no" checked>
+                                                Insufficient justification 
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label btn btn-sm btn-outline-danger">
+                                                <input class="form-check-input" type="checkbox"
+                                                       name="ex2"
+                                                       value="no" disabled>
+                                                Confusing sentence
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label btn btn-sm btn-outline-success">
+                                                <input class="form-check-input" type="checkbox"
+                                                       name="ex2"
+                                                       value="yes" disabled>
+                                                None
+                                            </label>
+                                        </div>
+                                        <div class="pl-0">
+                                            This is just a restatement of the answer and not a valid explanation.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row panel">
+                                    <div class="prompt pl-4 col-lg-8">
+                                        <b>Explanation #3:</b> There is a thunderstorm.
+                                    </div>
+
+                                    <div class="pl-4 col-lg-8 choicebox">
+                                        <div class="form-check">
+                                            <label class="form-check-label btn btn-sm btn-outline-success">
+                                                <input class="form-check-input" type="radio"
+                                                       name="example4"
+                                                       value="yes" disabled>
+                                                Yes
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label btn btn-sm btn-outline-primary">
+                                                <input class="form-check-input" type="radio"
+                                                       name="example4"
+                                                       value="w_yes" disabled>
+                                                Weak Yes
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label btn btn-sm btn-outline-warning">
+                                                <input class="form-check-input" type="radio"
+                                                       name="example4"
+                                                       value="w_no" checked>
+                                                Weak No
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label btn btn-sm btn-outline-danger">
+                                                <input class="form-check-input" type="radio"
+                                                       name="example4"
+                                                       value="no" disabled>
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel row">
+                                    <div class="prompt pl-4 col-lg-8">
+                                        What are the shortcomings of Explanation #3?
+                                    </div>
+                                    <div class="pl-4 col-lg-8 choicebox">
+                                        <div class="form-check">
+                                            <label class="form-check-label btn btn-sm btn-outline-danger">
+                                                <input class="form-check-input" type="checkbox"
+                                                       name="ex2"
+                                                       value="no" checked>
+                                                Incorrect description of the image
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label btn btn-sm btn-outline-danger">
+                                                <input class="form-check-input" type="checkbox"
+                                                       name="ex2"
+                                                       value="no" checked>
+                                                Insufficient justification 
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label btn btn-sm btn-outline-danger">
+                                                <input class="form-check-input" type="checkbox"
+                                                       name="ex2"
+                                                       value="no" disabled>
+                                                Confusing sentence
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label btn btn-sm btn-outline-success">
+                                                <input class="form-check-input" type="checkbox"
+                                                       name="ex2"
+                                                       value="yes" disabled>
+                                                None
+                                            </label>
+                                        </div>
+                                        <div class="pl-0">
+                                            It looks stormy in the image, but there is no concrete evidence of a thunderstorm. Further, thunderstorm doesn't always imply that the sea is not calm.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row panel">
+                                    <div class="prompt pl-4 col-lg-8">
+                                        <b>Explanation #4:</b> Calm seas can't be calm.
+                                    </div>
+
+                                    <div class="pl-4 col-lg-8 choicebox">
+                                        <div class="form-check">
+                                            <label class="form-check-label btn btn-sm btn-outline-success">
+                                                <input class="form-check-input" type="radio"
+                                                       name="example3"
+                                                       value="yes" disabled>
+                                                Yes
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label btn btn-sm btn-outline-primary">
+                                                <input class="form-check-input" type="radio"
+                                                       name="example3"
+                                                       value="w_yes" disabled>
+                                                Weak Yes
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label btn btn-sm btn-outline-warning">
+                                                <input class="form-check-input" type="radio"
+                                                       name="example3"
+                                                       value="w_no" disabled>
+                                                Weak No
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label btn btn-sm btn-outline-danger">
+                                                <input class="form-check-input" type="radio"
+                                                       name="example3"
+                                                       value="no" checked>
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel row">
+                                    <div class="prompt pl-4 col-lg-8">
+                                        What are the shortcomings of Explanation #4?
+                                    </div>
+                                    <div class="pl-4 col-lg-8 choicebox">
+                                        <div class="form-check">
+                                            <label class="form-check-label btn btn-sm btn-outline-danger">
+                                                <input class="form-check-input" type="checkbox"
+                                                       name="ex2"
+                                                       value="no" disabled>
+                                                Incorrect description of the image
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label btn btn-sm btn-outline-danger">
+                                                <input class="form-check-input" type="checkbox"
+                                                       name="ex2"
+                                                       value="no" checked>
+                                                Insufficient justification 
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label btn btn-sm btn-outline-danger">
+                                                <input class="form-check-input" type="checkbox"
+                                                       name="ex2"
+                                                       value="no" checked>
+                                                Confusing sentence
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label btn btn-sm btn-outline-success">
+                                                <input class="form-check-input" type="checkbox"
+                                                       name="ex2"
+                                                       value="yes" disabled>
+                                                None
+                                            </label>
+                                        </div>
+                                        <div class="pl-0">
+                                           This is a meaningless sentence.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- EXAMPLES END -->
+                </div>
+                <!-- ###### EXAMPLES END ###### -->
+
+                <!-- ###### SAMPLES START ###### -->
+                <div class="card" name="samples">
+                    <div class="card-header" id="samplesHeading">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse"
+                                    data-target="#samples" aria-expanded="true"
+                                    aria-controls="samples">
+                                Questionnaire 
+                            </button>
+                        </h5>
+                    </div>
+                    <div class="panel">
+                        <br/><br/>
+                        <h5><b>#### TASK 1 ####</b></h5>
+                        <div class="row" id="ex-img">
+                            <div class="col-lg-8">
+                                <h5><b>Image:</b></h5>
+                                <img class="img-thumbnail" src=${impath_1}>
+                                <p><h5><b> Question:</b> ${question_1}</h5></p>
+                            </div>
+                        </div>
+
+                        <div class="panel row">
+                            <div class="prompt pl-4 col-lg-8">
+                                What is the correct answer to the question?
+                            </div>
+
+                            <div class="pl-4 col-lg-8 choicebox">
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-primary">
+                                        <input class="form-check-input" type="radio"
+                                               name="c1" value="0">
+                                        ${answer_1_a}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-primary">
+                                        <input class="form-check-input" type="radio"
+                                               name="c1" value="1">
+                                        ${answer_1_b}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-primary">
+                                        <input class="form-check-input" type="radio"
+                                               name="c1" value="2">
+                                        ${answer_1_c}
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="row panel" name="expl-1">
+                            <div class="prompt pl-4 col-lg-8">
+                                <h5><b><u> Explanation #1</u>: ${explanation_1_i}</b></h5>
+                                a) Given the above image and question, does this explanation justify the answer to the question?
+                            </div>
+
+                            <div class="pl-4 col-lg-8 choicebox">
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-success">
+                                        <input class="form-check-input" type="radio" name="1-e1"
+                                                 value="yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-primary">
+                                        <input class="form-check-input" type="radio" name="1-e1"
+                                                 value="w_yes">
+                                        Weak Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-warning">
+                                        <input class="form-check-input" type="radio" name="1-e1"
+                                                value="w_no">
+                                        Weak No
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-danger">
+                                        <input class="form-check-input" type="radio" name="1-e1"
+                                                value="no">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="questionrow">
+                                <div class="prompt pl-4 col-lg-8">
+                                    b) What are the shortcomings of the explanation?
+                                </div>
+                                <div class="col-lg-2 choicebox">
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="1-f1"
+                                                   value="0">
+                                            Incorrect description of the image
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="1-f1"
+                                                   value="1">
+                                            Insufficient justification
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="1-f1"
+                                                   value="2">
+                                            Confusing sentence
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-success">
+                                            <input class="form-check-input" type="checkbox" name="1-f1"
+                                                   value="3">
+                                            None
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row panel" name="expl-2">
+                            <div class="prompt pl-4 col-lg-8">
+                                <h5><b><u> Explanation #2</u>: ${explanation_1_j}</b></h5>
+                                a) Given the above image and question, does this explanation justify the answer to the question?
+                            </div>
+
+                            <div class="pl-4 col-lg-8 choicebox">
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-success">
+                                        <input class="form-check-input" type="radio" name="1-e2"
+                                                 value="yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-primary">
+                                        <input class="form-check-input" type="radio" name="1-e2"
+                                                 value="w_yes">
+                                        Weak Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-warning">
+                                        <input class="form-check-input" type="radio" name="1-e2"
+                                                value="w_no">
+                                        Weak No
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-danger">
+                                        <input class="form-check-input" type="radio" name="1-e2"
+                                                value="no">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="questionrow">
+                                <div class="prompt pl-4 col-lg-8">
+                                    b) What are the shortcomings of the explanation?
+                                </div>
+                                <div class="col-lg-2 choicebox">
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="1-f2"
+                                                   value="0">
+                                            Incorrect description of the image
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="1-f2"
+                                                   value="1">
+                                            Insufficient justification
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="1-f2"
+                                                   value="2">
+                                            Confusing sentence
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-success">
+                                            <input class="form-check-input" type="checkbox" name="1-f2"
+                                                   value="3">
+                                            None
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <br/><br/>
+                        <h5><b>#### TASK 2 ####</b></h5>
+                        <div class="row" id="ex-img">
+                            <div class="col-lg-8">
+                                <h5><b>Image:</b></h5>
+                                <img class="img-thumbnail" src=${impath_2}>
+                                <p><h5><b> Question:</b> ${question_2}</h5></p>
+                            </div>
+                        </div>
+
+                        <div class="panel row">
+                            <div class="prompt pl-4 col-lg-8">
+                                What is the correct answer to the question?
+                            </div>
+
+                            <div class="pl-4 col-lg-8 choicebox">
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-primary">
+                                        <input class="form-check-input" type="radio"
+                                               name="c2" value="0">
+                                        ${answer_2_a}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-primary">
+                                        <input class="form-check-input" type="radio"
+                                               name="c2" value="1">
+                                        ${answer_2_b}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-primary">
+                                        <input class="form-check-input" type="radio"
+                                               name="c2" value="2">
+                                        ${answer_2_c}
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="row panel" name="expl-1">
+                            <div class="prompt pl-4 col-lg-8">
+                                <h5><b><u> Explanation #1</u>: ${explanation_2_i}</b></h5>
+                                a) Given the above image and question, does this explanation justify the answer to the question?
+                            </div>
+
+                            <div class="pl-4 col-lg-8 choicebox">
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-success">
+                                        <input class="form-check-input" type="radio" name="2-e1"
+                                                 value="yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-primary">
+                                        <input class="form-check-input" type="radio" name="2-e1"
+                                                 value="w_yes">
+                                        Weak Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-warning">
+                                        <input class="form-check-input" type="radio" name="2-e1"
+                                                value="w_no">
+                                        Weak No
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-danger">
+                                        <input class="form-check-input" type="radio" name="2-e1"
+                                                value="no">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="questionrow">
+                                <div class="prompt pl-4 col-lg-8">
+                                    b) What are the shortcomings of the explanation?
+                                </div>
+                                <div class="col-lg-2 choicebox">
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="2-f1"
+                                                   value="0">
+                                            Incorrect description of the image
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="2-f1"
+                                                   value="1">
+                                            Insufficient justification
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="2-f1"
+                                                   value="2">
+                                            Confusing sentence
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-success">
+                                            <input class="form-check-input" type="checkbox" name="2-f1"
+                                                   value="3">
+                                            None
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row panel" name="expl-2">
+                            <div class="prompt pl-4 col-lg-8">
+                                <h5><b><u> Explanation #2</u>: ${explanation_2_j}</b></h5>
+                                a) Given the above image and question, does this explanation justify the answer to the question?
+                            </div>
+
+                            <div class="pl-4 col-lg-8 choicebox">
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-success">
+                                        <input class="form-check-input" type="radio" name="2-e2"
+                                                 value="yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-primary">
+                                        <input class="form-check-input" type="radio" name="2-e2"
+                                                 value="w_yes">
+                                        Weak Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-warning">
+                                        <input class="form-check-input" type="radio" name="2-e2"
+                                                value="w_no">
+                                        Weak No
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-danger">
+                                        <input class="form-check-input" type="radio" name="2-e2"
+                                                value="no">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="questionrow">
+                                <div class="prompt pl-4 col-lg-8">
+                                    b) What are the shortcomings of the explanation?
+                                </div>
+                                <div class="col-lg-2 choicebox">
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="2-f2"
+                                                   value="0">
+                                            Incorrect description of the image
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="2-f2"
+                                                   value="1">
+                                            Insufficient justification
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="2-f2"
+                                                   value="2">
+                                            Confusing sentence
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-success">
+                                            <input class="form-check-input" type="checkbox" name="2-f2"
+                                                   value="3">
+                                            None
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <br/><br/>
+                        <h5><b>#### TASK 3 ####</b></h5>
+                        <div class="row" id="ex-img">
+                            <div class="col-lg-8">
+                                <h5><b>Image:</b></h5>
+                                <img class="img-thumbnail" src=${impath_3}>
+                                <p><h5><b> Question:</b> ${question_3}</h5></p>
+                            </div>
+                        </div>
+
+                        <div class="panel row">
+                            <div class="prompt pl-4 col-lg-8">
+                                What is the correct answer to the question?
+                            </div>
+
+                            <div class="pl-4 col-lg-8 choicebox">
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-primary">
+                                        <input class="form-check-input" type="radio"
+                                               name="c3" value="0">
+                                        ${answer_3_a}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-primary">
+                                        <input class="form-check-input" type="radio"
+                                               name="c3" value="1">
+                                        ${answer_3_b}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-primary">
+                                        <input class="form-check-input" type="radio"
+                                               name="c3" value="2">
+                                        ${answer_3_c}
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="row panel" name="expl-1">
+                            <div class="prompt pl-4 col-lg-8">
+                                <h5><b><u> Explanation #1</u>: ${explanation_3_i}</b></h5>
+                                a) Given the above image and question, does this explanation justify the answer to the question?
+                            </div>
+
+                            <div class="pl-4 col-lg-8 choicebox">
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-success">
+                                        <input class="form-check-input" type="radio" name="3-e1"
+                                                 value="yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-primary">
+                                        <input class="form-check-input" type="radio" name="3-e1"
+                                                 value="w_yes">
+                                        Weak Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-warning">
+                                        <input class="form-check-input" type="radio" name="3-e1"
+                                                value="w_no">
+                                        Weak No
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-danger">
+                                        <input class="form-check-input" type="radio" name="3-e1"
+                                                value="no">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="questionrow">
+                                <div class="prompt pl-4 col-lg-8">
+                                    b) What are the shortcomings of the explanation?
+                                </div>
+                                <div class="col-lg-2 choicebox">
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="3-f1"
+                                                   value="0">
+                                            Incorrect description of the image
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="3-f1"
+                                                   value="1">
+                                            Insufficient justification
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="3-f1"
+                                                   value="2">
+                                            Confusing sentence
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-success">
+                                            <input class="form-check-input" type="checkbox" name="3-f1"
+                                                   value="3">
+                                            None
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row panel" name="expl-2">
+                            <div class="prompt pl-4 col-lg-8">
+                                <h5><b><u> Explanation #2</u>: ${explanation_3_j}</b></h5>
+                                a) Given the above image and question, does this explanation justify the answer to the question?
+                            </div>
+
+                            <div class="pl-4 col-lg-8 choicebox">
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-success">
+                                        <input class="form-check-input" type="radio" name="3-e2"
+                                                 value="yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-primary">
+                                        <input class="form-check-input" type="radio" name="3-e2"
+                                                 value="w_yes">
+                                        Weak Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-warning">
+                                        <input class="form-check-input" type="radio" name="3-e2"
+                                                value="w_no">
+                                        Weak No
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-danger">
+                                        <input class="form-check-input" type="radio" name="3-e2"
+                                                value="no">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="questionrow">
+                                <div class="prompt pl-4 col-lg-8">
+                                    b) What are the shortcomings of the explanation?
+                                </div>
+                                <div class="col-lg-2 choicebox">
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="3-f2"
+                                                   value="0">
+                                            Incorrect description of the image
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="3-f2"
+                                                   value="1">
+                                            Insufficient justification
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="3-f2"
+                                                   value="2">
+                                            Confusing sentence
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-success">
+                                            <input class="form-check-input" type="checkbox" name="3-f2"
+                                                   value="3">
+                                            None
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <br/><br/>
+                        <h5><b>#### TASK 4 ####</b></h5>
+                        <div class="row" id="ex-img">
+                            <div class="col-lg-8">
+                                <h5><b>Image:</b></h5>
+                                <img class="img-thumbnail" src=${impath_4}>
+                                <p><h5><b> Question:</b> ${question_4}</h5></p>
+                            </div>
+                        </div>
+
+                        <div class="panel row">
+                            <div class="prompt pl-4 col-lg-8">
+                                What is the correct answer to the question?
+                            </div>
+
+                            <div class="pl-4 col-lg-8 choicebox">
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-primary">
+                                        <input class="form-check-input" type="radio"
+                                               name="c4" value="0">
+                                        ${answer_4_a}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-primary">
+                                        <input class="form-check-input" type="radio"
+                                               name="c4" value="1">
+                                        ${answer_4_b}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-primary">
+                                        <input class="form-check-input" type="radio"
+                                               name="c4" value="2">
+                                        ${answer_4_c}
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="row panel" name="expl-1">
+                            <div class="prompt pl-4 col-lg-8">
+                                <h5><b><u> Explanation #1</u>: ${explanation_4_i}</b></h5>
+                                a) Given the above image and question, does this explanation justify the answer to the question?
+                            </div>
+
+                            <div class="pl-4 col-lg-8 choicebox">
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-success">
+                                        <input class="form-check-input" type="radio" name="4-e1"
+                                                 value="yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-primary">
+                                        <input class="form-check-input" type="radio" name="4-e1"
+                                                 value="w_yes">
+                                        Weak Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-warning">
+                                        <input class="form-check-input" type="radio" name="4-e1"
+                                                value="w_no">
+                                        Weak No
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-danger">
+                                        <input class="form-check-input" type="radio" name="4-e1"
+                                                value="no">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="questionrow">
+                                <div class="prompt pl-4 col-lg-8">
+                                    b) What are the shortcomings of the explanation?
+                                </div>
+                                <div class="col-lg-2 choicebox">
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="4-f1"
+                                                   value="0">
+                                            Incorrect description of the image
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="4-f1"
+                                                   value="1">
+                                            Insufficient justification
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="4-f1"
+                                                   value="2">
+                                            Confusing sentence
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-success">
+                                            <input class="form-check-input" type="checkbox" name="4-f1"
+                                                   value="3">
+                                            None
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row panel" name="expl-2">
+                            <div class="prompt pl-4 col-lg-8">
+                                <h5><b><u> Explanation #2</u>: ${explanation_4_j}</b></h5>
+                                a) Given the above image and question, does this explanation justify the answer to the question?
+                            </div>
+
+                            <div class="pl-4 col-lg-8 choicebox">
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-success">
+                                        <input class="form-check-input" type="radio" name="4-e2"
+                                                 value="yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-primary">
+                                        <input class="form-check-input" type="radio" name="4-e2"
+                                                 value="w_yes">
+                                        Weak Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-warning">
+                                        <input class="form-check-input" type="radio" name="4-e2"
+                                                value="w_no">
+                                        Weak No
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-danger">
+                                        <input class="form-check-input" type="radio" name="4-e2"
+                                                value="no">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="questionrow">
+                                <div class="prompt pl-4 col-lg-8">
+                                    b) What are the shortcomings of the explanation?
+                                </div>
+                                <div class="col-lg-2 choicebox">
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="4-f2"
+                                                   value="0">
+                                            Incorrect description of the image
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="4-f2"
+                                                   value="1">
+                                            Insufficient justification
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="4-f2"
+                                                   value="2">
+                                            Confusing sentence
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-success">
+                                            <input class="form-check-input" type="checkbox" name="4-f2"
+                                                   value="3">
+                                            None
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <br/><br/>
+                        <h5><b>#### TASK 5 ####</b></h5>
+                        <div class="row" id="ex-img">
+                            <div class="col-lg-8">
+                                <h5><b>Image:</b></h5>
+                                <img class="img-thumbnail" src=${impath_5}>
+                                <p><h5><b> Question:</b> ${question_5}</h5></p>
+                            </div>
+                        </div>
+
+                        <div class="panel row">
+                            <div class="prompt pl-4 col-lg-8">
+                                What is the correct answer to the question?
+                            </div>
+
+                            <div class="pl-4 col-lg-8 choicebox">
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-primary">
+                                        <input class="form-check-input" type="radio"
+                                               name="c5" value="0">
+                                        ${answer_5_a}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-primary">
+                                        <input class="form-check-input" type="radio"
+                                               name="c5" value="1">
+                                        ${answer_5_b}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-primary">
+                                        <input class="form-check-input" type="radio"
+                                               name="c5" value="2">
+                                        ${answer_5_c}
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="row panel" name="expl-1">
+                            <div class="prompt pl-4 col-lg-8">
+                                <h5><b><u> Explanation #1</u>: ${explanation_5_i}</b></h5>
+                                a) Given the above image and question, does this explanation justify the answer to the question?
+                            </div>
+
+                            <div class="pl-4 col-lg-8 choicebox">
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-success">
+                                        <input class="form-check-input" type="radio" name="5-e1"
+                                                 value="yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-primary">
+                                        <input class="form-check-input" type="radio" name="5-e1"
+                                                 value="w_yes">
+                                        Weak Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-warning">
+                                        <input class="form-check-input" type="radio" name="5-e1"
+                                                value="w_no">
+                                        Weak No
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-danger">
+                                        <input class="form-check-input" type="radio" name="5-e1"
+                                                value="no">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="questionrow">
+                                <div class="prompt pl-4 col-lg-8">
+                                    b) What are the shortcomings of the explanation?
+                                </div>
+                                <div class="col-lg-2 choicebox">
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="5-f1"
+                                                   value="0">
+                                            Incorrect description of the image
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="5-f1"
+                                                   value="1">
+                                            Insufficient justification
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="5-f1"
+                                                   value="2">
+                                            Confusing sentence
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-success">
+                                            <input class="form-check-input" type="checkbox" name="5-f1"
+                                                   value="3">
+                                            None
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row panel" name="expl-2">
+                            <div class="prompt pl-4 col-lg-8">
+                                <h5><b><u> Explanation #2</u>: ${explanation_5_j}</b></h5>
+                                a) Given the above image and question, does this explanation justify the answer to the question?
+                            </div>
+
+                            <div class="pl-4 col-lg-8 choicebox">
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-success">
+                                        <input class="form-check-input" type="radio" name="5-e2"
+                                                 value="yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-primary">
+                                        <input class="form-check-input" type="radio" name="5-e2"
+                                                 value="w_yes">
+                                        Weak Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-warning">
+                                        <input class="form-check-input" type="radio" name="5-e2"
+                                                value="w_no">
+                                        Weak No
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-danger">
+                                        <input class="form-check-input" type="radio" name="5-e2"
+                                                value="no">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="questionrow">
+                                <div class="prompt pl-4 col-lg-8">
+                                    b) What are the shortcomings of the explanation?
+                                </div>
+                                <div class="col-lg-2 choicebox">
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="5-f2"
+                                                   value="0">
+                                            Incorrect description of the image
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="5-f2"
+                                                   value="1">
+                                            Insufficient justification
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="5-f2"
+                                                   value="2">
+                                            Confusing sentence
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-success">
+                                            <input class="form-check-input" type="checkbox" name="5-f2"
+                                                   value="3">
+                                            None
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <br/><br/>
+                        <h5><b>#### TASK 6 ####</b></h5>
+                        <div class="row" id="ex-img">
+                            <div class="col-lg-8">
+                                <h5><b>Image:</b></h5>
+                                <img class="img-thumbnail" src=${impath_6}>
+                                <p><h5><b> Question:</b> ${question_6}</h5></p>
+                            </div>
+                        </div>
+
+                        <div class="panel row">
+                            <div class="prompt pl-4 col-lg-8">
+                                What is the correct answer to the question?
+                            </div>
+
+                            <div class="pl-4 col-lg-8 choicebox">
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-primary">
+                                        <input class="form-check-input" type="radio"
+                                               name="c6" value="0">
+                                        ${answer_6_a}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-primary">
+                                        <input class="form-check-input" type="radio"
+                                               name="c6" value="1">
+                                        ${answer_6_b}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-primary">
+                                        <input class="form-check-input" type="radio"
+                                               name="c6" value="2">
+                                        ${answer_6_c}
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="row panel" name="expl-1">
+                            <div class="prompt pl-4 col-lg-8">
+                                <h5><b><u> Explanation #1</u>: ${explanation_6_i}</b></h5>
+                                a) Given the above image and question, does this explanation justify the answer to the question?
+                            </div>
+
+                            <div class="pl-4 col-lg-8 choicebox">
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-success">
+                                        <input class="form-check-input" type="radio" name="6-e1"
+                                                 value="yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-primary">
+                                        <input class="form-check-input" type="radio" name="6-e1"
+                                                 value="w_yes">
+                                        Weak Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-warning">
+                                        <input class="form-check-input" type="radio" name="6-e1"
+                                                value="w_no">
+                                        Weak No
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-danger">
+                                        <input class="form-check-input" type="radio" name="6-e1"
+                                                value="no">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="questionrow">
+                                <div class="prompt pl-4 col-lg-8">
+                                    b) What are the shortcomings of the explanation?
+                                </div>
+                                <div class="col-lg-2 choicebox">
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="6-f1"
+                                                   value="0">
+                                            Incorrect description of the image
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="6-f1"
+                                                   value="1">
+                                            Insufficient justification
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="6-f1"
+                                                   value="2">
+                                            Confusing sentence
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-success">
+                                            <input class="form-check-input" type="checkbox" name="6-f1"
+                                                   value="3">
+                                            None
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row panel" name="expl-2">
+                            <div class="prompt pl-4 col-lg-8">
+                                <h5><b><u> Explanation #2</u>: ${explanation_6_j}</b></h5>
+                                a) Given the above image and question, does this explanation justify the answer to the question?
+                            </div>
+
+                            <div class="pl-4 col-lg-8 choicebox">
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-success">
+                                        <input class="form-check-input" type="radio" name="6-e2"
+                                                 value="yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-primary">
+                                        <input class="form-check-input" type="radio" name="6-e2"
+                                                 value="w_yes">
+                                        Weak Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-warning">
+                                        <input class="form-check-input" type="radio" name="6-e2"
+                                                value="w_no">
+                                        Weak No
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-danger">
+                                        <input class="form-check-input" type="radio" name="6-e2"
+                                                value="no">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="questionrow">
+                                <div class="prompt pl-4 col-lg-8">
+                                    b) What are the shortcomings of the explanation?
+                                </div>
+                                <div class="col-lg-2 choicebox">
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="6-f2"
+                                                   value="0">
+                                            Incorrect description of the image
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="6-f2"
+                                                   value="1">
+                                            Insufficient justification
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="6-f2"
+                                                   value="2">
+                                            Confusing sentence
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-success">
+                                            <input class="form-check-input" type="checkbox" name="6-f2"
+                                                   value="3">
+                                            None
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <br/><br/>
+                        <h5><b>#### TASK 7 ####</b></h5>
+                        <div class="row" id="ex-img">
+                            <div class="col-lg-8">
+                                <h5><b>Image:</b></h5>
+                                <img class="img-thumbnail" src=${impath_7}>
+                                <p><h5><b> Question:</b> ${question_7}</h5></p>
+                            </div>
+                        </div>
+
+                        <div class="panel row">
+                            <div class="prompt pl-4 col-lg-8">
+                                What is the correct answer to the question?
+                            </div>
+
+                            <div class="pl-4 col-lg-8 choicebox">
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-primary">
+                                        <input class="form-check-input" type="radio"
+                                               name="c7" value="0">
+                                        ${answer_7_a}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-primary">
+                                        <input class="form-check-input" type="radio"
+                                               name="c7" value="1">
+                                        ${answer_7_b}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-primary">
+                                        <input class="form-check-input" type="radio"
+                                               name="c7" value="2">
+                                        ${answer_7_c}
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="row panel" name="expl-1">
+                            <div class="prompt pl-4 col-lg-8">
+                                <h5><b><u> Explanation #1</u>: ${explanation_7_i}</b></h5>
+                                a) Given the above image and question, does this explanation justify the answer to the question?
+                            </div>
+
+                            <div class="pl-4 col-lg-8 choicebox">
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-success">
+                                        <input class="form-check-input" type="radio" name="7-e1"
+                                                 value="yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-primary">
+                                        <input class="form-check-input" type="radio" name="7-e1"
+                                                 value="w_yes">
+                                        Weak Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-warning">
+                                        <input class="form-check-input" type="radio" name="7-e1"
+                                                value="w_no">
+                                        Weak No
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-danger">
+                                        <input class="form-check-input" type="radio" name="7-e1"
+                                                value="no">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="questionrow">
+                                <div class="prompt pl-4 col-lg-8">
+                                    b) What are the shortcomings of the explanation?
+                                </div>
+                                <div class="col-lg-2 choicebox">
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="7-f1"
+                                                   value="0">
+                                            Incorrect description of the image
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="7-f1"
+                                                   value="1">
+                                            Insufficient justification
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="7-f1"
+                                                   value="2">
+                                            Confusing sentence
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-success">
+                                            <input class="form-check-input" type="checkbox" name="7-f1"
+                                                   value="3">
+                                            None
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row panel" name="expl-2">
+                            <div class="prompt pl-4 col-lg-8">
+                                <h5><b><u> Explanation #2</u>: ${explanation_7_j}</b></h5>
+                                a) Given the above image and question, does this explanation justify the answer to the question?
+                            </div>
+
+                            <div class="pl-4 col-lg-8 choicebox">
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-success">
+                                        <input class="form-check-input" type="radio" name="7-e2"
+                                                 value="yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-primary">
+                                        <input class="form-check-input" type="radio" name="7-e2"
+                                                 value="w_yes">
+                                        Weak Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-warning">
+                                        <input class="form-check-input" type="radio" name="7-e2"
+                                                value="w_no">
+                                        Weak No
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-danger">
+                                        <input class="form-check-input" type="radio" name="7-e2"
+                                                value="no">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="questionrow">
+                                <div class="prompt pl-4 col-lg-8">
+                                    b) What are the shortcomings of the explanation?
+                                </div>
+                                <div class="col-lg-2 choicebox">
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="7-f2"
+                                                   value="0">
+                                            Incorrect description of the image
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="7-f2"
+                                                   value="1">
+                                            Insufficient justification
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="7-f2"
+                                                   value="2">
+                                            Confusing sentence
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-success">
+                                            <input class="form-check-input" type="checkbox" name="7-f2"
+                                                   value="3">
+                                            None
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <br/><br/>
+                        <h5><b>#### TASK 8 ####</b></h5>
+                        <div class="row" id="ex-img">
+                            <div class="col-lg-8">
+                                <h5><b>Image:</b></h5>
+                                <img class="img-thumbnail" src=${impath_8}>
+                                <p><h5><b> Question:</b> ${question_8}</h5></p>
+                            </div>
+                        </div>
+
+                        <div class="panel row">
+                            <div class="prompt pl-4 col-lg-8">
+                                What is the correct answer to the question?
+                            </div>
+
+                            <div class="pl-4 col-lg-8 choicebox">
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-primary">
+                                        <input class="form-check-input" type="radio"
+                                               name="c8" value="0">
+                                        ${answer_8_a}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-primary">
+                                        <input class="form-check-input" type="radio"
+                                               name="c8" value="1">
+                                        ${answer_8_b}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-primary">
+                                        <input class="form-check-input" type="radio"
+                                               name="c8" value="2">
+                                        ${answer_8_c}
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="row panel" name="expl-1">
+                            <div class="prompt pl-4 col-lg-8">
+                                <h5><b><u> Explanation #1</u>: ${explanation_8_i}</b></h5>
+                                a) Given the above image and question, does this explanation justify the answer to the question?
+                            </div>
+
+                            <div class="pl-4 col-lg-8 choicebox">
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-success">
+                                        <input class="form-check-input" type="radio" name="8-e1"
+                                                 value="yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-primary">
+                                        <input class="form-check-input" type="radio" name="8-e1"
+                                                 value="w_yes">
+                                        Weak Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-warning">
+                                        <input class="form-check-input" type="radio" name="8-e1"
+                                                value="w_no">
+                                        Weak No
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-danger">
+                                        <input class="form-check-input" type="radio" name="8-e1"
+                                                value="no">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="questionrow">
+                                <div class="prompt pl-4 col-lg-8">
+                                    b) What are the shortcomings of the explanation?
+                                </div>
+                                <div class="col-lg-2 choicebox">
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="8-f1"
+                                                   value="0">
+                                            Incorrect description of the image
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="8-f1"
+                                                   value="1">
+                                            Insufficient justification
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="8-f1"
+                                                   value="2">
+                                            Confusing sentence
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-success">
+                                            <input class="form-check-input" type="checkbox" name="8-f1"
+                                                   value="3">
+                                            None
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row panel" name="expl-2">
+                            <div class="prompt pl-4 col-lg-8">
+                                <h5><b><u> Explanation #2</u>: ${explanation_8_j}</b></h5>
+                                a) Given the above image and question, does this explanation justify the answer to the question?
+                            </div>
+
+                            <div class="pl-4 col-lg-8 choicebox">
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-success">
+                                        <input class="form-check-input" type="radio" name="8-e2"
+                                                 value="yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-primary">
+                                        <input class="form-check-input" type="radio" name="8-e2"
+                                                 value="w_yes">
+                                        Weak Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-warning">
+                                        <input class="form-check-input" type="radio" name="8-e2"
+                                                value="w_no">
+                                        Weak No
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-danger">
+                                        <input class="form-check-input" type="radio" name="8-e2"
+                                                value="no">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="questionrow">
+                                <div class="prompt pl-4 col-lg-8">
+                                    b) What are the shortcomings of the explanation?
+                                </div>
+                                <div class="col-lg-2 choicebox">
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="8-f2"
+                                                   value="0">
+                                            Incorrect description of the image
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="8-f2"
+                                                   value="1">
+                                            Insufficient justification
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="8-f2"
+                                                   value="2">
+                                            Confusing sentence
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-success">
+                                            <input class="form-check-input" type="checkbox" name="8-f2"
+                                                   value="3">
+                                            None
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <br/><br/>
+                        <h5><b>#### TASK 9 ####</b></h5>
+                        <div class="row" id="ex-img">
+                            <div class="col-lg-8">
+                                <h5><b>Image:</b></h5>
+                                <img class="img-thumbnail" src=${impath_9}>
+                                <p><h5><b> Question:</b> ${question_9}</h5></p>
+                            </div>
+                        </div>
+
+                        <div class="panel row">
+                            <div class="prompt pl-4 col-lg-8">
+                                What is the correct answer to the question?
+                            </div>
+
+                            <div class="pl-4 col-lg-8 choicebox">
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-primary">
+                                        <input class="form-check-input" type="radio"
+                                               name="c9" value="0">
+                                        ${answer_9_a}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-primary">
+                                        <input class="form-check-input" type="radio"
+                                               name="c9" value="1">
+                                        ${answer_9_b}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-primary">
+                                        <input class="form-check-input" type="radio"
+                                               name="c9" value="2">
+                                        ${answer_9_c}
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="row panel" name="expl-1">
+                            <div class="prompt pl-4 col-lg-8">
+                                <h5><b><u> Explanation #1</u>: ${explanation_9_i}</b></h5>
+                                a) Given the above image and question, does this explanation justify the answer to the question?
+                            </div>
+
+                            <div class="pl-4 col-lg-8 choicebox">
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-success">
+                                        <input class="form-check-input" type="radio" name="9-e1"
+                                                 value="yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-primary">
+                                        <input class="form-check-input" type="radio" name="9-e1"
+                                                 value="w_yes">
+                                        Weak Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-warning">
+                                        <input class="form-check-input" type="radio" name="9-e1"
+                                                value="w_no">
+                                        Weak No
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-danger">
+                                        <input class="form-check-input" type="radio" name="9-e1"
+                                                value="no">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="questionrow">
+                                <div class="prompt pl-4 col-lg-8">
+                                    b) What are the shortcomings of the explanation?
+                                </div>
+                                <div class="col-lg-2 choicebox">
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="9-f1"
+                                                   value="0">
+                                            Incorrect description of the image
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="9-f1"
+                                                   value="1">
+                                            Insufficient justification
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="9-f1"
+                                                   value="2">
+                                            Confusing sentence
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-success">
+                                            <input class="form-check-input" type="checkbox" name="9-f1"
+                                                   value="3">
+                                            None
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row panel" name="expl-2">
+                            <div class="prompt pl-4 col-lg-8">
+                                <h5><b><u> Explanation #2</u>: ${explanation_9_j}</b></h5>
+                                a) Given the above image and question, does this explanation justify the answer to the question?
+                            </div>
+
+                            <div class="pl-4 col-lg-8 choicebox">
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-success">
+                                        <input class="form-check-input" type="radio" name="9-e2"
+                                                 value="yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-primary">
+                                        <input class="form-check-input" type="radio" name="9-e2"
+                                                 value="w_yes">
+                                        Weak Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-warning">
+                                        <input class="form-check-input" type="radio" name="9-e2"
+                                                value="w_no">
+                                        Weak No
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-danger">
+                                        <input class="form-check-input" type="radio" name="9-e2"
+                                                value="no">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="questionrow">
+                                <div class="prompt pl-4 col-lg-8">
+                                    b) What are the shortcomings of the explanation?
+                                </div>
+                                <div class="col-lg-2 choicebox">
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="9-f2"
+                                                   value="0">
+                                            Incorrect description of the image
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="9-f2"
+                                                   value="1">
+                                            Insufficient justification
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="9-f2"
+                                                   value="2">
+                                            Confusing sentence
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-success">
+                                            <input class="form-check-input" type="checkbox" name="9-f2"
+                                                   value="3">
+                                            None
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <br/><br/>
+                        <h5><b>#### TASK 10 ####</b></h5>
+                        <div class="row" id="ex-img">
+                            <div class="col-lg-8">
+                                <h5><b>Image:</b></h5>
+                                <img class="img-thumbnail" src=${impath_10}>
+                                <p><h5><b> Question:</b> ${question_10}</h5></p>
+                            </div>
+                        </div>
+
+                        <div class="panel row">
+                            <div class="prompt pl-4 col-lg-8">
+                                What is the correct answer to the question?
+                            </div>
+
+                            <div class="pl-4 col-lg-8 choicebox">
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-primary">
+                                        <input class="form-check-input" type="radio"
+                                               name="c10" value="0">
+                                        ${answer_10_a}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-primary">
+                                        <input class="form-check-input" type="radio"
+                                               name="c10" value="1">
+                                        ${answer_10_b}
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-primary">
+                                        <input class="form-check-input" type="radio"
+                                               name="c10" value="2">
+                                        ${answer_10_c}
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="row panel" name="expl-1">
+                            <div class="prompt pl-4 col-lg-8">
+                                <h5><b><u> Explanation #1</u>: ${explanation_10_i}</b></h5>
+                                a) Given the above image and question, does this explanation justify the answer to the question?
+                            </div>
+
+                            <div class="pl-4 col-lg-8 choicebox">
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-success">
+                                        <input class="form-check-input" type="radio" name="10-e1"
+                                                 value="yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-primary">
+                                        <input class="form-check-input" type="radio" name="10-e1"
+                                                 value="w_yes">
+                                        Weak Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-warning">
+                                        <input class="form-check-input" type="radio" name="10-e1"
+                                                value="w_no">
+                                        Weak No
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-danger">
+                                        <input class="form-check-input" type="radio" name="10-e1"
+                                                value="no">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="questionrow">
+                                <div class="prompt pl-4 col-lg-8">
+                                    b) What are the shortcomings of the explanation?
+                                </div>
+                                <div class="col-lg-2 choicebox">
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="10-f1"
+                                                   value="0">
+                                            Incorrect description of the image
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="10-f1"
+                                                   value="1">
+                                            Insufficient justification
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="10-f1"
+                                                   value="2">
+                                            Confusing sentence
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-success">
+                                            <input class="form-check-input" type="checkbox" name="10-f1"
+                                                   value="3">
+                                            None
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row panel" name="expl-2">
+                            <div class="prompt pl-4 col-lg-8">
+                                <h5><b><u> Explanation #2</u>: ${explanation_10_j}</b></h5>
+                                a) Given the above image and question, does this explanation justify the answer to the question?
+                            </div>
+
+                            <div class="pl-4 col-lg-8 choicebox">
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-success">
+                                        <input class="form-check-input" type="radio" name="10-e2"
+                                                 value="yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-primary">
+                                        <input class="form-check-input" type="radio" name="10-e2"
+                                                 value="w_yes">
+                                        Weak Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-warning">
+                                        <input class="form-check-input" type="radio" name="10-e2"
+                                                value="w_no">
+                                        Weak No
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label btn btn-sm btn-outline-danger">
+                                        <input class="form-check-input" type="radio" name="10-e2"
+                                                value="no">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="questionrow">
+                                <div class="prompt pl-4 col-lg-8">
+                                    b) What are the shortcomings of the explanation?
+                                </div>
+                                <div class="col-lg-2 choicebox">
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="10-f2"
+                                                   value="0">
+                                            Incorrect description of the image
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="10-f2"
+                                                   value="1">
+                                            Insufficient justification
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-danger">
+                                            <input class="form-check-input" type="checkbox" name="10-f2"
+                                                   value="2">
+                                            Confusing sentence
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label btn btn-sm btn-outline-success">
+                                            <input class="form-check-input" type="checkbox" name="10-f2"
+                                                   value="3">
+                                            None
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ###### SAMPLES END ###### -->
+
+                <!--FEEDBACK START-->
+                <div class="card">
+                    <h5 class="card-header">Optional feedback? &nbsp; &nbsp;<a
+                            data-toggle="collapse"
+                            href="#feedback"
+                            style="color:#0080ff;font-weight:normal;text-decoration: underline;">(expand/collapse)</a>
+                    </h5>
+                    <div id="feedback" class="collapse" style="margin:5px">
+                        <div class="card-body">
+                            <p>If anything about the HIT was unclear, please comment below. I'd like
+                                to
+                                make my HITs easier for future workers, so I really appreciate
+                                feedback!
+                                Note: no need to point out incorrect/missing detections here. </p>
+                            <textarea class="form-control" rows="2" name="commentbox"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <!--FEEDBACK END-->
+
+                <!--SUBMIT START-->
+                <div class="row mt-5">
+                    <div class="col-2 offset-5">
+                        <input id="submitButton" type="submit" value="Submit">
+                    </div>
+                </div>
+                <!--SUBMIT END-->
+            </div>
+            <!-- CONTENT END -->
+        </div>
+    </div>
+</section>
+
+
+<link rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css"
+      integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+      crossorigin="anonymous">
+<style type="text/css">
+
+    /***********************************************
+    MOSAIC BOOSTRAP OVERWRITES
+    ***********************************************/
+    #hitinfo .card {
+        border-radius: 0;
+    }
+    #hitinfo .card:first-child {
+        border-bottom: 0;
+    }
+     #hitinfo button.btn-link {
+        color: #06486F;
+        text-decoration: none;
+     }
+    #hitinfo button.btn-link:hover {
+        text-decoration: none;
+    }
+    #hit ul.question-choice {
+        list-style-type: none;
+    }
+    #hit #mturk_form .card {
+        border: none;
+        background-color: inherit;
+    }
+    #hit .accordion .card-header {
+        background-color: #E5E5E5;
+        border: none;
+    }
+    #hit .card {
+        border: none;
+    }
+    /***********************************************
+    MOSAIC GENERAL STYLING
+    ***********************************************/
+    #hit {
+        background-color: rgba(0,0,0,.03);
+        padding-bottom: 4rem;
+    }
+     body {
+        font-family: "Open Sans", "Roboto", sans-serif;
+        font-size: .92rem;
+     }
+    textarea#feedback {
+        width: 100%;
+        border: 1px solid #ddd;
+    }
+    textarea#feedback:focus {
+        outline: none !important;
+        border-color: #85c8ea;
+    }
+    input#submitButton {
+        margin: auto;
+        display: block;
+        background-color: #2172a4;
+        color: #fff;
+        font-size: 1.125rem;
+        padding: .5rem 1rem;
+        cursor: pointer;
+        border-radius: 1rem;
+    }
+    input#submitButton:hover {
+        background-color: #06486F;
+    }
+    #event, div.question {
+        //border-bottom: solid 1px #ccc;
+    }
+    .event-container h4 {
+        font-size: 1.24rem;
+        padding: 1rem 1.5rem;
+    }
+    .event {
+        background-color: rgba(0,0,0,.03);
+        border-radius: 1rem;
+        margin-top: 25px;
+        margin-bottom: 0px;
+    }
+    input.person {
+        margin-left: 20px;
+        border: none;
+        background-color: white;
+        text-align: left;
+    }
+    input.inline_blank {
+        border: none;
+        border-bottom: solid 1px #ccc;
+        background-color: inherit;
+        text-align: center;
+    }
+    input.inline_blank.hitbox {
+        text-align: left;
+    }
+    input.inline_blank:focus {
+        outline: none;
+    }
+    .optional span.obj-num, .optional span.indicator {
+        color: #aaa;
+    }
+    span.optional {
+        font-style: italic;
+    }
+    div.question-field-group .card-body{
+        padding: 2rem 0 0;
+    }
+    div.example div.card-body {
+        padding: 1rem 0 0;
+    }
+    div.form-check, div.form-check label, div.form-check input {
+        cursor: pointer;
+    }
+    .example {
+        padding: 2rem 0;
+        border-bottom: solid 1px #ccc;
+    }
+    div.example:last-child {
+        border-bottom: none;
+    }
+    div.question-container{
+        padding: 3rem 0;
+        border-bottom: solid 1px #ccc;
+    }
+    div.question-container:first-child{
+        padding: 0 0 5rem;
+    }
+    li {
+        margin-top: 0;
+    }
+    li.level1 {
+        margin-top: 1rem;
+    }
+    #instructions li.warning {
+        color: darkorange;
+    }
+    #instructions li.sub-warning {
+        color: black;
+    }
+    #instructions li.good {
+        color: green;
+    }
+    #instructions li.bad {
+        color: darkred;
+    }
+    #instructions span.bad {
+        color: darkred;
+    }
+    div.req-obj-container div.card-body {
+        padding: 0;
+    }
+    div.req-obj-fields-container {
+        padding-left: 0;
+    }
+    span.highlight {
+        font-weight: bold;
+        color: darkslateblue;
+    }
+    span.emphasize {
+        font-style: italic;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+    div.xneed div.card-body {
+        padding: 0;
+    }
+
+    .minipad {
+        padding-left: 0rem;
+    }
+    .questionrow {
+        /*border-bottom: 1px solid gray;*/
+        padding-bottom: 2px;
+        margin-bottom: 4px;
+        margin-left: 0;
+        margin-right: -5px;
+    }
+
+    .prompt {
+      font-size: 18;
+    }
+
+    .panel {
+        padding: 10px;
+        margin-bottom: 3px;
+        margin-top: 5px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+        box-shadow: 0 1px 1px rgba(0,0,0,.05);
+        font-size: 11pt;
+    }
+    .table {
+        margin-top: 0.2rem;
+        margin-bottom: 0.2rem;
+        background-color: #e6e6e633;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+        box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    }
+    .table td, .table th {
+        padding: 0.3rem;
+    }
+
+    .body {
+        font-size:11pt;
+    }
+
+    .emph {
+        background-color: #c3e6cb;
+        color: #000;
+        font-weight: bold;
+    }
+
+    .emph-expl {
+        background-color: #FACC2E;
+        color: #000;
+        font-weight: bold;
+    }
+
+    .problem {
+        background-color: #F5BCA9;
+        color: #000;
+        font-weight: bold;
+    }
+
+    .problem2 {
+        background-color: #F5F6CE;
+        color: #000;
+        font-weight: bold;
+    }
+
+    .problem3 {
+        background-color: #D8F6CE;
+        color: #000;
+        font-weight: bold;
+    }
+    div {
+        margin-bottom: 0.5em;
+    }
+    .new {
+        background-color: yellow;
+        color: #000;
+        font-weight: bold;
+    }
+
+    .new-latest {
+        background-color: orange;
+        color: #000;
+        font-weight: bold;
+    }
+
+    .superemph {
+        background-color: #e6a0a5;
+        color: #000;
+        font-weight: bold;
+    }
+
+    .deemph {
+        /*background-color: #f9f9f9;*/
+        color: #141414;
+        /*font-weight: lighter;*/
+        font-size:10pt;
+    }
+
+    .row {
+        margin-right: -5px;
+        margin-left:-5px;
+    }
+    .questionbox {
+        padding-right: 1px;
+        padding-left: 1px;
+    }
+    .choicebox{
+      padding-right: 1px;
+      padding-left: 1.5rem;
+      margin-left: 25px;
+    }
+    .answerbox {
+        padding-right: 1px;
+        padding-left: 1px;
+    }
+    .input-group-text {
+        padding: 3px;
+        font-size: 0.8rem;
+    }
+    .card-header {
+        padding: .25rem .5rem;
+    }
+    .card {
+        margin-bottom: 3px;
+    }
+    .card-body {
+        padding-top: .75rem;
+        padding-bottom: 0;
+    }
+    .list-group-item {
+        padding: .2rem .5rem;
+        background-color: #e6e6e6;
+    }
+
+    .image-toggle {
+        border-color: #000;
+        white-space: normal;
+        color: #fff;
+    }
+
+    .img-container {
+      position: relative;
+      display: inline-block;
+    }
+    .annotimage {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin-top:0;
+    }
+
+    .drawing-class {
+        height:0;
+    }
+    .segmentation {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height:100%;
+      width:100%;
+    }
+
+    .smalltxt {
+        font-size:.6rem;
+    }
+    .form-check {
+        padding-left:0;
+        font-size:0.75rem;
+    }
+    .form-check-input {
+        margin-left:0;
+        position: relative;
+    }
+
+    .btn-sm {
+        border-radius: .2rem;
+        padding: 0.1rem 0.5rem;
+        margin-bottom:0;
+    }
+
+    .container {
+        padding:0;
+    }
+    .col-xl-12 {
+        padding:0;
+    }
+</style>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"
+        integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/2.6.5/svg.min.js"
+        integrity="sha256-QvaFssiJCr71CxCZfYVWAXXGlwAqXbXerSdoW2t/Few="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/1.3.7/chroma.min.js"></script>
+<script src="https://cdn.rawgit.com/internalfx/distinct-colors/3bbd4cc2/dist/distinct-colors.min.js"></script>
+
+
+<script>
+const FONTSIZE=20;
+
+function getLabel(answer_box){
+    for (var i=0; i<3; i++) {
+        if (answer_box[i].checked == true) {
+            return i
+        }
+    }
+}
+
+function all_ticked_check() {
+    // checks that every box has been ticked
+    
+    var is_checked = {};
+    $('.choicebox > .form-check > > input:checked').each(function() { //checks all choice boxes
+        is_checked[$(this).attr('name')] = true; // confirms that "this" (current answer, see "name") is indeed checked
+    });
+    console.log(is_checked); // prints all the ones that are checked
+
+    var all = {};
+    $('.choicebox > .form-check > > input').each(function() { //checks all choice boxes
+        all[$(this).attr('name')] = true; // confirms that "this" (current answer, see "name") is indeed checked
+    });
+
+    var is_complete = false;
+    if (Object.keys(all).length == Object.keys(is_checked).length) {
+        is_complete = true
+    }
+
+    return is_complete;
+};
+
+var exp_indices = {
+    1: "${1_gt_idx}",
+    2: "${2_gt_idx}",
+    3: "${3_gt_idx}",
+    4: "${4_gt_idx}",
+    5: "${5_gt_idx}",
+    6: "${6_gt_idx}",
+    7: "${7_gt_idx}",
+    8: "${8_gt_idx}",
+    9: "${9_gt_idx}",
+    10: "${10_gt_idx}",
+    11: "BUGFIX"
+};
+
+var q_ids = {
+    1: "${1_ques_id}",
+    2: "${2_ques_id}",
+    3: "${3_ques_id}",
+    4: "${4_ques_id}",
+    5: "${5_ques_id}",
+    6: "${6_ques_id}",
+    7: "${7_ques_id}",
+    8: "${8_ques_id}",
+    9: "${9_ques_id}",
+    10: "${10_ques_id}",
+    11: "BUGFIX"
+};
+
+
+function answers_correct_check() {
+    // HIT can only be submitted if at least 8/10 questions were answered correctly
+
+    var true_labels = {
+        1: "${gt_1}",
+        2: "${gt_2}",
+        3: "${gt_3}",
+        4: "${gt_4}",
+        5: "${gt_5}",
+        6: "${gt_6}",
+        7: "${gt_7}",
+        8: "${gt_8}",
+        9: "${gt_9}",
+        10: "${gt_10}",
+        11: "BUGFIX"
+    };
+
+    // iterate trough answers
+    var message = ""
+    var incorrect_counter = 0
+    for (var i=1; i < 11; i++) {
+        var answer_box = document.getElementsByName('c' + i);
+        var selected_answer = getLabel(answer_box)
+        var gt_answer = true_labels[i];
+        if (selected_answer != gt_answer) {
+            incorrect_counter++
+            console.log("The answer for task " + i +  " seems to be incorrect. ")
+            message = message + "The answer for task " + i +  " seems to be incorrect. ";
+        }
+    }
+    if (incorrect_counter>1) {
+        message = message + "Please correct these answers and re-evaluate the explanations accordingly.";
+        console.log(message);
+        return [false, message];
+    }
+    return [true, message];
+};
+
+function getExpl(expl_box){
+    for (var i=0; i<4; i++) {
+        if (expl_box[i].checked == true) {
+            return i
+        }
+    }
+}
+
+function all_answers_yes() {
+    // Checks that not a large majority of explanations (more than 80%) have been evaluated with "Yes"
+
+    // iterate trough answers
+    var message = ""
+    var yes_counter = 0
+    for (var i=1; i < 11; i++) {
+        var expl1_box = document.getElementsByName(i + '-e1');
+        var expl2_box = document.getElementsByName(i + '-e2');
+        expl1 = getExpl(expl1_box);
+        expl2 = getExpl(expl2_box);
+        if (expl1 == 0) {
+            yes_counter++
+        }
+        if (expl2 == 0) {
+            yes_counter++
+        }
+    }
+    if (yes_counter>16) {        
+        message = "It is very unlikely that so many answer are just 'YES'. Please re-evaluate and be more critical.";
+        console.log(message);
+        return [false, message];
+    }
+    return [true, message];
+};
+
+function shortcoming_mismatch() {
+    // sets restriction on evaluation of explanations and shortcoming selection
+
+    // iterate trough answers
+    var message = ""
+    var incorrect_counter = 0
+    for (var i=1; i < 11; i++) {
+
+        // get explanations
+        var expl1_box = document.getElementsByName(i + '-e1');
+        var expl2_box = document.getElementsByName(i + '-e2');
+        expl1 = getExpl(expl1_box);
+        expl2 = getExpl(expl2_box);
+
+        // get shortcomings
+        var sh1_box = document.getElementsByName(i + '-f1');
+        var sh2_box = document.getElementsByName(i + '-f2');
+
+        // if yes and not None
+        if ((expl1 == 0) && (sh1_box[3].checked == false)) {
+            incorrect_counter++
+            message = message + "In explanation #1 of task " + i + " you selected 'YES' but selected a shortcoming. In this case, the explanation cannot be better than 'WEAK YES'. Please correct this.\n";
+        }
+        // if no and None
+        if ((expl2 == 0) && (sh2_box[3].checked == false)) {
+            incorrect_counter++
+            message = message + "In explanation #2 of task " + i + " you selected 'YES' but selected a shortcoming. In this case, the explanation cannot be better than 'WEAK YES'. Please correct this.\n";
+        }
+        if ((expl1 > 1) && (sh1_box[3].checked == true)) {
+            incorrect_counter++
+            message = message + "In explanation #1 of task " + i + " you selected '(WEAK) NO' but selected no shortcoming. If the explanation doesn't justify the answer, it has to have shortcomings. Please correct this.\n";
+        }
+        if ((expl2 > 1) && (sh2_box[3].checked == true)) {
+            incorrect_counter++
+            message = message + "In explanation #2 of task " + i + " you selected '(WEAK) NO' but selected no shortcoming. If the explanation doesn't justify the answer, it has to have shortcomings. Please correct this.\n";
+        }
+    }
+    if (incorrect_counter>0) {        
+        console.log(message);
+        return [false, message];
+    }
+    return [true, message];
+};
+
+
+function none_unique() {
+    // restrictions on which shortcomings can be selected
+
+    // iterate trough answers
+    var message = ""
+    var incorrect_counter = 0
+    for (var i=1; i < 11; i++) {
+
+        // get shortcomings
+        var sh1_box = document.getElementsByName(i + '-f1');
+        var sh2_box = document.getElementsByName(i + '-f2');
+
+        if ((sh1_box[3].checked == true) && ((sh1_box[0].checked == true) || (sh1_box[1].checked == true) || (sh1_box[2].checked == true))) {
+            incorrect_counter++
+            message = message + "In explanation #1 of task " + i + " you selected 'None' and other options as shortcomings. This is not possible. Please correct this.\n";
+        }
+        if ((sh2_box[3].checked == true) && ((sh2_box[0].checked == true) || (sh2_box[1].checked == true) || (sh2_box[2].checked == true))) {
+            incorrect_counter++
+            message = message + "In explanation #2 of task " + i + " you selected 'None' and other options as shortcomings. This is not possible. Please correct this.\n";
+        }
+    }
+    if (incorrect_counter>0) {        
+        console.log(message);
+        return [false, message];
+    }
+    return [true, message];
+};
+
+
+
+
+$( document ).ready(function() {
+    $('#submitButton').on('click', function () {
+        if (!all_ticked_check()) {
+            alert("Not all boxes are ticked. Make sure to do this first.");
+            return false;
+        }
+        if (!none_unique()[0]) {
+            alert(none_unique()[1]);
+            return false;
+        }
+        if (!shortcoming_mismatch()[0]) {
+            alert(shortcoming_mismatch()[1]);
+            return false;
+        }
+        if (!all_answers_yes()[0]) {
+            alert(all_answers_yes()[1]);
+            return false;
+        }
+        if (!answers_correct_check()[0]) {
+            alert(answers_correct_check()[1]);
+            return false;
+        }
+    });
+});
+
+
+</script>
