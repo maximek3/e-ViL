@@ -2,7 +2,7 @@
 
 This repository contains the e-SNLI-VE dataset and the HTML files for the human evaluation framework of our paper: 
 
-*e-ViL: A Dataset and Benchmark for Natural Language Explanations in Vision-Language Tasks (https://arxiv.org/abs/2105.03761)*
+*e-ViL: A Dataset and Benchmark for Natural Language Explanations in Vision-Language Tasks* (https://arxiv.org/abs/2105.03761)
 
 ## e-SNLI-VE
 
