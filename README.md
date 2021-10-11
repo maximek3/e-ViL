@@ -1,32 +1,76 @@
-# e-ViL
+## e-UG
 
-This repository contains the e-SNLI-VE dataset and the HTML files for the human evaluation framework of our paper: 
+e-UG uses UNITER as vision-language model and GPT-2 to generate explanations. The UNITER implementation is based on the code of the [Transformers-VQA](https://github.com/YIKUAN8/Transformers-VQA) repo and the GPT-2 implementation is based on [Marasovic et al. 2020](https://github.com/allenai/visual-reasoning-rationalization).
 
-*e-ViL: A Dataset and Benchmark for Natural Language Explanations in Vision-Language Tasks* (https://arxiv.org/abs/2105.03761)
+The entry point for training and testing the models is in `eUG.py`.
 
-## e-SNLI-VE
+The `.sh` files will give you hints what arguments are required to run the code.
 
-The train, dev, and test splits are in the `data` folder. The `.csv` files contain Flickr30k Image ID's. Flickr30k can be downloaded [here](https://www.kaggle.com/hsankesara/flickr-image-dataset).
+### Environment
 
-## e-ViL MTurk Questionnaires
+The environment file is in `eUG.yml`.
 
-The `e-ViL_MTurk` folder contains the MTurk questionnaires for e-SNLI-VE, VQA-X, and VCR. These `HTML` files can be uploaded to the Amazon Mechanical Turk platform for crowd-sourced, human evaluation.
+Create the environment by running `conda env create -f eUG.yml`.
 
-## Citation
+### COCOcaption package for automatic NLG metrics
 
-If you use this dataset or the e-ViL benchmark in your work, please cite our paper:
+In order to run NLG evaluation in this code you need to download the package from this [google drive link](). It needs to be placed in the root directory of this project.
+
+### Downloading the data
+
+#### e-SNLI-VE
+
+1. Run this [script](https://github.com/ChenRocks/UNITER/blob/master/scripts/download_ve.sh) to download the Faster-RCNN features for Flickr30k.
+2. Store them in `data/esnlive/img_db`.
+3. Download the `.json` files, ready to be used with e-UG, from this [Google Drive link](https://drive.google.com/drive/folders/1ajL93SLltaKiBk2PgvaxCLAJSoXKAsZz?usp=sharing).
+
+#### VQA-X
+
+1. Download the Faster-RCNN features for MS COCO train2014 (17 GB) and val2014 (8 GB) images:
+   
+    ```
+    wget https://nlp.cs.unc.edu/data/lxmert_data/mscoco_imgfeat/train2014_obj36.zip -P data/fasterRCNN_features
+    unzip data/img/train2014_obj36.zip -d data/fasterRCNN_features && rm data/fasterRCNN_features/train2014_obj36.zip
+    wget https://nlp.cs.unc.edu/data/lxmert_data/mscoco_imgfeat/val2014_obj36.zip -P data/fasterRCNN_features
+    unzip data/fasterRCNN_features/val2014_obj36.zip -d data && rm data/fasterRCNN_features/val2014_obj36.zip
+    wget https://nlp.cs.unc.edu/data/lxmert_data/mscoco_imgfeat/test2015_obj36.zip -P data/fasterRCNN_features
+    unzip data/fasterRCNN_features/test2015_obj36.zip -d data && rm data/fasterRCNN_features/test2015_obj36.zip
+    ```
+
+2. Download the VQA-X dataset from this [Google Drive link](https://drive.google.com/drive/folders/1zPexyNo_W8L-FYq6iPcERQ5cJUUJzYhl?usp=sharing).
+3. Store the train, dev, and test set in `data/vqax`.
+4. EASIER: provide download links for .json files
+   
+#### VCR
+
+1. Download the Faster R-CNN feature using this [script](https://github.com/ChenRocks/UNITER/blob/master/scripts/download_vcr.sh). 
+2. Download the VCR `.json` files from this [Google Drive link](https://drive.google.com/drive/folders/1REopdRzF1tgik22LHf2i85MMLXjconQK?usp=sharing).
+   
+#### Pre-trained weights
+
+Download the general pre-trained UNITER-base using this [link](https://acvrpublicycchen.blob.core.windows.net/uniter/pretrained/uniter-base.pt). The pre-trained UNITER-base for VCR is available from this [link](https://acvrpublicycchen.blob.core.windows.net/uniter/pretrained/uniter-base-vcr_2nd_stage.pt). We use the general pre-trained model for VQA-X and e-SNLI-VE, and the VCR pre-trained one for VCR.
+
+
+### Training
+
+Check the command line arguments in `param.py`.
+
+Here is an example to train the model on e-SNLI-VE:
 
 ```
-@misc{kayser2021evil,
-      title={e-ViL: A Dataset and Benchmark for Natural Language Explanations in Vision-Language Tasks}, 
-      author={Maxime Kayser and Oana-Maria Camburu and Leonard Salewski and Cornelius Emde and Virginie Do and Zeynep Akata and Thomas Lukasiewicz},
-      year={2021},
-      eprint={2105.03761},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
-}
+python eUG.py --task esnlive --train data/esnlive/esnlive_train.json --val data/esnlive/esnlive_dev.json --save_steps 5000 --output experiments/esnlive_run1/train
 ```
 
+The model weights, Tensorboard logs, and a text log will be saved in the given output directory.
 
+### Testing
 
+Check the command line arguments in `param.py`.
 
+Here is an example to test a trained model on the e-SNLI-VE test set:
+
+```
+python eUG.py --task esnlive --test data/esnlive/esnlive_test.json --load_trained experiments/esnlive_run1/train/best_global.pth --output experiments/esnlive_run1/eval 
+```
+
+All generated explanations, automatic NLG scores, and a text log will be saved in the given output directory.
