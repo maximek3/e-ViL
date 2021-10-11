@@ -1,10 +1,22 @@
+# e-ViL
+
+This repository contains the e-SNLI-VE dataset, the HTML files for the e-ViL human evaluation framework, and e-UG model of our ICCV 2021 paper:
+
+*e-ViL: A Dataset and Benchmark for Natural Language Explanations in Vision-Language Tasks* ([ICCV 2021](https://openaccess.thecvf.com/content/ICCV2021/html/Kayser_E-ViL_A_Dataset_and_Benchmark_for_Natural_Language_Explanations_in_ICCV_2021_paper.html)).
+
+## e-SNLI-VE
+
+The train, dev, and test splits are in the `data` folder. The `.csv` files contain Flickr30k Image ID's. Flickr30k can be downloaded [here](https://www.kaggle.com/hsankesara/flickr-image-dataset).
+
+## e-ViL MTurk Questionnaires
+
+The `e-ViL_MTurk` folder contains the MTurk questionnaires for e-SNLI-VE, VQA-X, and VCR. These `HTML` files can be uploaded to the Amazon Mechanical Turk platform for crowd-sourced, human evaluation.
+
 ## e-UG
 
 e-UG uses UNITER as vision-language model and GPT-2 to generate explanations. The UNITER implementation is based on the code of the [Transformers-VQA](https://github.com/YIKUAN8/Transformers-VQA) repo and the GPT-2 implementation is based on [Marasovic et al. 2020](https://github.com/allenai/visual-reasoning-rationalization).
 
 The entry point for training and testing the models is in `eUG.py`.
-
-The `.sh` files will give you hints what arguments are required to run the code.
 
 ### Environment
 
@@ -14,15 +26,14 @@ Create the environment by running `conda env create -f eUG.yml`.
 
 ### COCOcaption package for automatic NLG metrics
 
-In order to run NLG evaluation in this code you need to download the package from this [google drive link](). It needs to be placed in the root directory of this project.
+In order to run NLG evaluation in this code you need to download the package from this [Google Drive link](https://drive.google.com/file/d/1nLlrtQlsP5kSeB9L0PTle4PeGL9CJg29/view?usp=sharing). It needs to be placed in the root directory of this project.
 
 ### Downloading the data
 
 #### e-SNLI-VE
 
-1. Run this [script](https://github.com/ChenRocks/UNITER/blob/master/scripts/download_ve.sh) to download the Faster-RCNN features for Flickr30k.
-2. Store them in `data/esnlive/img_db`.
-3. Download the `.json` files, ready to be used with e-UG, from this [Google Drive link](https://drive.google.com/drive/folders/1ajL93SLltaKiBk2PgvaxCLAJSoXKAsZz?usp=sharing).
+1. Run this [script](https://github.com/ChenRocks/UNITER/blob/master/scripts/download_ve.sh) to download the Faster-RCNN features for Flickr30k and store them in `data/esnlive/img_db/flickr30k/`.
+3. Download the `.json` files, ready to be used with e-UG, from this [Google Drive link](https://drive.google.com/drive/folders/1ajL93SLltaKiBk2PgvaxCLAJSoXKAsZz?usp=sharing) and store them in `data/esnlive/`.
 
 #### VQA-X
 
@@ -37,10 +48,7 @@ In order to run NLG evaluation in this code you need to download the package fro
     unzip data/fasterRCNN_features/test2015_obj36.zip -d data && rm data/fasterRCNN_features/test2015_obj36.zip
     ```
 
-2. Download the VQA-X dataset from this [Google Drive link](https://drive.google.com/drive/folders/1zPexyNo_W8L-FYq6iPcERQ5cJUUJzYhl?usp=sharing).
-3. Store the train, dev, and test set in `data/vqax`.
-4. EASIER: provide download links for .json files
-   
+2. Download the VQA-X dataset from this [Google Drive link](https://drive.google.com/drive/folders/1zPexyNo_W8L-FYq6iPcERQ5cJUUJzYhl?usp=sharing) and store the splits in `data/vqax/`.   
 #### VCR
 
 1. Download the Faster R-CNN feature using this [script](https://github.com/ChenRocks/UNITER/blob/master/scripts/download_vcr.sh). 
@@ -74,3 +82,18 @@ python eUG.py --task esnlive --test data/esnlive/esnlive_test.json --load_traine
 ```
 
 All generated explanations, automatic NLG scores, and a text log will be saved in the given output directory.
+
+## Citation
+
+If you use this dataset or the e-ViL benchmark in your work, please cite our paper:
+
+```
+@InProceedings{Kayser_2021_ICCV,
+    author    = {Kayser, Maxime and Camburu, Oana-Maria and Salewski, Leonard and Emde, Cornelius and Do, Virginie and Akata, Zeynep and Lukasiewicz, Thomas},
+    title     = {E-ViL: A Dataset and Benchmark for Natural Language Explanations in Vision-Language Tasks},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2021},
+    pages     = {1244-1254}
+}
+```
