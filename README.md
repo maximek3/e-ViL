@@ -51,8 +51,8 @@ In order to run NLG evaluation in this code you need to download the package fro
 2. Download the VQA-X dataset from this [Google Drive link](https://drive.google.com/drive/folders/1zPexyNo_W8L-FYq6iPcERQ5cJUUJzYhl?usp=sharing) and store the splits in `data/vqax/`.   
 #### VCR
 
-1. Download the Faster R-CNN feature using this [script](https://github.com/ChenRocks/UNITER/blob/master/scripts/download_vcr.sh). 
-2. Download the VCR `.json` files from this [Google Drive link](https://drive.google.com/drive/folders/1REopdRzF1tgik22LHf2i85MMLXjconQK?usp=sharing).
+1. Download the Faster R-CNN feature using this [script](https://github.com/ChenRocks/UNITER/blob/master/scripts/download_vcr.sh) and store them in `data/vcr/vcr_{split}/`.
+2. Download the VCR `.json` files from this [Google Drive link](https://drive.google.com/drive/folders/1REopdRzF1tgik22LHf2i85MMLXjconQK?usp=sharing) and store them in `data/vcr/`.
    
 #### Pre-trained weights
 
@@ -85,7 +85,7 @@ All generated explanations, automatic NLG scores, and a text log will be saved i
 
 ## Citation
 
-If you use this dataset or the e-ViL benchmark in your work, please cite our paper:
+If you use e-SNLI-VE, e-UG, or the e-ViL benchmark in your work, please cite our paper:
 
 ```
 @InProceedings{Kayser_2021_ICCV,
